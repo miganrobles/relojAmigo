@@ -44,5 +44,24 @@ public class ClockDisplay
             System.out.println("Algún valor introducido no es correcto, para las horas deben estar entre 0 y 23 y para los minutos entre 0 y 59");
         }
     }
+    
+     /**
+     * Este método nos permite adelantar un minuto el reloj
+     */
+    public void timeTick()
+    {
+        minutos = minutos + 1;
+        if (minutos == 60) 
+        {
+            minutos = 0;
+            horas = horas + 1;
+            if (horas == 24)
+            {
+                horas = 0;
+            }
+        }
+        
+        
+    }
 }    
     
