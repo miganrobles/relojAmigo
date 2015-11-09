@@ -63,5 +63,26 @@ public class ClockDisplay
         
         
     }
+    
+     /**
+     * Este método no debuelve la hora con el formato 00:00.
+     */
+    public String getTime()
+    {
+        String horaReloj = horas + ":" + minutos;
+        if (horas < 10 && minutos < 10)
+        {
+            horaReloj = "0" + horas + ":" + "0" + minutos;
+        }
+        else if (horas < 10)
+        {
+            horaReloj = "0" + horas + ":" + minutos;
+        }
+        else if (minutos < 10)
+        {
+            horaReloj = horas + ":" + "0" + minutos;
+        }
+        return horaReloj;
+    }
 }    
     
